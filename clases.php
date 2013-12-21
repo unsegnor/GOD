@@ -8,6 +8,8 @@ class direcciones{
     const gestion_usuarios = "usuarios.php";
     const registro = "registro.php";
     const registroWeb = "registroweb.php";
+    const add_situacion = "addsituacionweb.php";
+    const add_objetivo = "addobjetivoweb.php";
 }
 
 class Res{
@@ -34,4 +36,8 @@ class Estado{
 
 class Situacion extends Estado{
     var $problematica;
+}
+
+class Objetivo extends Estado{
+    var $tiempo_estimado;
 }

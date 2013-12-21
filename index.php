@@ -7,6 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="stilos.css">
         <title></title>
     </head>
     <body>
@@ -17,12 +18,16 @@ and open the template in the editor.
         if (isset($_SESSION['loged_in'])) {
             echo getMenu();
             
-            //Permitir añadir una situación
+            //echo getTablaEstados();
             
+            echo "<table>";
+            echo "<tr><td>";
+            echo tablaSituaciones();
+            echo "</td><td>";
+            echo tablaObjetivos();
+            echo "</td></tr>";
+            echo "</table>";
             
-            
-            
-            echo listadoSituaciones();
         } else {
             $formulario_login = getFormularioLogin();
             echo $formulario_login;
